@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: MyString
+  type: 
+  version: MyString
+  functionnality: MyString
+  PO: MyString
+  SO: MyString
+  HASP: MyString
+  RMA: MyString
+  entitlment: MyString
+  host: MyString
+  description: MyText
+
+two:
+  project: MyString
+  type: 
+  version: MyString
+  functionnality: MyString
+  PO: MyString
+  SO: MyString
+  HASP: MyString
+  RMA: MyString
+  entitlment: MyString
+  host: MyString
+  description: MyText

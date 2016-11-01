@@ -1,0 +1,87 @@
+<%= form_for(product) do |f| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= f.label :customer_id %>
+    <%= f.collection_select :customer_id, Customer.order(:name),:id,:name, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :project %>
+    <%= f.text_field :project %>
+  </div>
+
+  <div class="field">
+    <%= f.label :producttype %>
+    <%= f.text_field :producttype %>
+  </div>
+
+  <div class="field">
+    <%= f.label :version %>
+    <%= f.text_field :version %>
+  </div>
+
+  <div class="field">
+    <%= f.label :functionnality %>
+    <%= f.text_field :functionnality %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PO %>
+    <%= f.text_field :PO %>
+  </div>
+
+  <div class="field">
+    <%= f.label :SO %>
+    <%= f.text_field :SO %>
+  </div>
+
+  <div class="field">
+    <%= f.label :slanumber %>
+    <%= f.text_field :slanumber %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sladate %>
+    <%= f.text_field :sladate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :HASP %>
+    <%= f.text_field :HASP %>
+  </div>
+
+  <div class="field">
+    <%= f.label :RMA %>
+    <%= f.text_field :RMA %>
+  </div>
+
+  <div class="field">
+    <%= f.label :entitlment %>
+    <%= f.text_field :entitlment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :host %>
+    <%= f.text_field :host %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit, class: "btn btn-primary" %>
+  </div>
+<% end %>
