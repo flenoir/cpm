@@ -1,7 +1,17 @@
 <div class="container-fluid">
 
-	<h1>Bienvenue sur le CPM</h1>
+	<% if user_signed_in? %>
 
-	<p>Veuillez-vous logger afin de pourvoir accèder à l'interface de gestion</p>
+<h1>Bienvenue sur le CPM</h1>
+
+
+	<% else %>
+
+	
+	<h1>Logguez-vous pour continuer</h1>
+	<%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary'%>
+ 
+
+ <% end %>
 
 </div>
